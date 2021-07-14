@@ -10,6 +10,21 @@ yarn install
 
 https://redwoodjs.com/docs/local-postgres-setup#local-postgres-setup
 
+After following the instructions on redwood docs, your ```.env``` should look something like:
+
+```
+# THIS FILE SHOULD NOT BE CHECKED INTO YOUR VERSION CONTROL SYSTEM
+#
+# Environment variables set here will override those in .env.defaults.
+# Any environment variables you need in production you will need to setup with
+# your hosting provider. For example in Netlify you can add environment
+# variables in Settings > Build & Deploy > environment
+#
+DATABASE_URL="postgresql://rodrigofaria@localhost:5432/rodrigofaria?connection_limit=1"
+TEST_DATABASE_URL="postgresql://rodrigofaria@localhost:5432/rodrigofaria?connection_limit=1"
+```
+
+
 ### Fire it up
 
 ```terminal
