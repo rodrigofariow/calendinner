@@ -1,12 +1,3 @@
-# Redwood
-
-> **WARNING:** RedwoodJS software has not reached a stable version 1.0 and should not be considered suitable for production use. In the "make it work; make it right; make it fast" paradigm, Redwood is in the later stages of the "make it work" phase.
-
-## Getting Started
-- [Tutorial](https://redwoodjs.com/tutorial/welcome-to-redwood): getting started and complete overview guide.
-- [Docs](https://redwoodjs.com/docs/introduction): using the Redwood Router, handling assets and files, list of command-line tools, and more.
-- [Redwood Community](https://community.redwoodjs.com): get help, share tips and tricks, and collaborate on everything about RedwoodJS.
-
 ### Setup
 
 We use Yarn as our package manager. To get the dependencies installed, just do this in the root directory:
@@ -14,6 +5,25 @@ We use Yarn as our package manager. To get the dependencies installed, just do t
 ```terminal
 yarn install
 ```
+
+### Configure local Postgresql DB
+
+https://redwoodjs.com/docs/local-postgres-setup#local-postgres-setup
+
+After following the instructions on redwood docs, your ```.env``` should look something like:
+
+```
+# THIS FILE SHOULD NOT BE CHECKED INTO YOUR VERSION CONTROL SYSTEM
+#
+# Environment variables set here will override those in .env.defaults.
+# Any environment variables you need in production you will need to setup with
+# your hosting provider. For example in Netlify you can add environment
+# variables in Settings > Build & Deploy > environment
+#
+DATABASE_URL="postgresql://rodrigofaria@localhost:5432/rodrigofaria?connection_limit=1"
+TEST_DATABASE_URL="postgresql://rodrigofaria@localhost:5432/rodrigofaria?connection_limit=1"
+```
+
 
 ### Fire it up
 
